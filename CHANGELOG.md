@@ -1,0 +1,1 @@
+- 16/08/26 - Added aliases to `.zshrc`
