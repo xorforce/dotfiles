@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Runs after `git pull --rebase` (post-merge doesn't fire for rebases).
+# Only care about rebase rewrites, not `git commit --amend`.
+set -euo pipefail
+[[ "${1:-}" == "rebase" ]] || exit 0
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+"$DOTFILES_DIR/install.sh"

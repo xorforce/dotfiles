@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Runs after `git pull` (fast-forward or merge). Relinks any new dotfiles.
+set -euo pipefail
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+"$DOTFILES_DIR/install.sh"
