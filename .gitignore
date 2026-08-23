@@ -1,1 +1,11 @@
-*
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor/tool junk
+*.swp
+*.swo
+*~
+
+# Local backups made by install.sh, if ever run from inside the repo
+.dotfiles_backup/
